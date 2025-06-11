@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "minimal-alpha-5",
+  "name": "vanilla-react-agent-chat",
   "main": "src/worker.tsx",
   "compatibility_date": "2025-05-08",
   "compatibility_flags": ["nodejs_compat"],
@@ -9,21 +9,21 @@
   },
   "ai": { "binding": "AI" },
   "vars": {
-    "CHAT_AGENT_PATH": "chat-agent", // matches binding-name, duplicated in Agent.tsx
-    "CHAT_AGENT_NAME": "agent", // duplicated in Agent.tsx
+    "CHAT_AGENT_NAMESPACE_KEBABCASE": "chat-agent-do-namespace", // matches binding name, duplicated in App.tsx
+    "CHAT_AGENT_ID": "chat-agent-id", // duplicated in App.tsx
   },
   "durable_objects": {
     "bindings": [
       {
-        "name": "CHAT_AGENT",
-        "class_name": "Chat"
+        "name": "CHAT_AGENT_DO_NAMESPACE",
+        "class_name": "ChatAgentDO"
       }
     ]
   },
   "migrations": [
     {
       "tag": "v1",
-      "new_sqlite_classes": ["Chat"]
+      "new_sqlite_classes": ["ChatAgentDO"]
     }
   ]
 }

@@ -3,7 +3,7 @@ import { createWorkersAI } from 'workers-ai-provider'
 import { env } from 'cloudflare:workers'
 import { streamText } from 'ai'
 
-export class Chat extends AIChatAgent<Env> {
+export class ChatAgentDO extends AIChatAgent<Env> {
   async onChatMessage() {
     const workersai = createWorkersAI({ binding: env.AI })
 
