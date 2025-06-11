@@ -16,10 +16,13 @@
   },
   "dependencies": {
     "agents": "^0.0.95",
+    "ai": "^4.3.16",
     "markdown-it": "^14.1.0",
-    "rwsdk": "0.1.0-alpha.7"
+    "rwsdk": "0.1.0-alpha.8",
+    "workers-ai-provider": "^0.6.1"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250610.0",
     "@types/markdown-it": "^14.1.2",
     "@types/node": "^24.0.0",
     "@types/react": "^19.1.7",

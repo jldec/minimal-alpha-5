@@ -5,7 +5,12 @@
     "jsx": "react-jsx",
     "module": "es2022",
     "moduleResolution": "bundler",
-    "types": ["./worker-configuration.d.ts", "./types/rw.d.ts", "./types/vite.d.ts"],
+    "types": [
+      "@cloudflare/workers-types/2023-07-01",
+      "./worker-configuration.d.ts",
+      "./types/rw.d.ts",
+      "./types/vite.d.ts"
+    ],
     "paths": {
       "@/*": ["./src/*"]
     },

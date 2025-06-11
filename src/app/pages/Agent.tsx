@@ -8,19 +8,19 @@ import { Message } from '@/app/shared/askAI'
 
 export function Agent() {
   const agent = useAgent({
-    agent: 'chat-agent-durable-object',
-    name: 'rwsdk-chat-agent'
+    agent: 'chat',
+    name: 'agent'
   })
 
   const { messages, handleSubmit, clearHistory, setInput } = useAgentChat({ agent })
 
   const onSubmit = async (prompt: string) => {
-    setInput(prompt)
-    handleSubmit()
+    // setInput(prompt)
+    // handleSubmit()
   }
 
   const onClear = async () => {
-    clearHistory()
+    // clearHistory()
   }
 
   // const messages: Message[] = []
