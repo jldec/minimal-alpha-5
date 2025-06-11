@@ -12,18 +12,18 @@ export function Agent() {
     name: 'rwsdk-chat-agent'
   })
 
-  // const { messages, handleSubmit, clearHistory, setInput } = useAgentChat({ agent })
+  const { messages, handleSubmit, clearHistory, setInput } = useAgentChat({ agent })
 
   const onSubmit = async (prompt: string) => {
-    // setInput(prompt)
-    // handleSubmit()
+    setInput(prompt)
+    handleSubmit()
   }
 
   const onClear = async () => {
-    // clearHistory()
+    clearHistory()
   }
 
-  const messages: Message[] = []
+  // const messages: Message[] = []
 
   return (
     <ChatLayout title="RedwoodSDK Agent Chat">

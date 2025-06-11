@@ -17,7 +17,7 @@
   "dependencies": {
     "agents": "^0.0.95",
     "markdown-it": "^14.1.0",
-    "rwsdk": "0.1.0-alpha.5"
+    "rwsdk": "0.1.0-alpha.7"
   },
   "devDependencies": {
     "@types/markdown-it": "^14.1.2",
