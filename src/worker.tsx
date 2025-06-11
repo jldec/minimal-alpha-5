@@ -1,15 +1,19 @@
 import { defineApp } from 'rwsdk/worker'
+import { Document } from '@/Document'
+import { env } from 'cloudflare:workers'
 import { index, render, route } from 'rwsdk/router'
-import { Document } from '@/app/Document'
-import { Home } from '@/app/pages/Home'
-import { Agent } from '@/app/pages/Agent'
-import { chatAgentApiRoutes } from './app/shared/api-routes'
+import { routeAgentRequest } from 'agents'
 
-export { Chat } from '@/app/shared/ChatAgentDO'
+import App from '@/app/App'
+
+export { ChatAgentDO } from '@/app/ChatAgentDO'
 
 export type AppContext = {}
 
 export default defineApp([
-  ...chatAgentApiRoutes,
-  render(Document, [index([Home]), route('/agent', Agent)])
+  render(Document, [index([App])]),
+
+  route(`/agents/${env.CHAT_AGENT_NAMESPACE_KEBABCASE}/${env.CHAT_AGENT_ID}`, async ({ request }) => {
+    return (await routeAgentRequest(request, env)) || Response.json({ msg: 'no agent here' }, { status: 404 })
+  })
 ])
