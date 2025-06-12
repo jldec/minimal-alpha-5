@@ -7,7 +7,8 @@ import type { Message } from '@ai-sdk/react'
 export default function App() {
   const agent = useAgent({
     agent: 'chat-agent-do-namespace',
-    name: 'chat-agent-id'
+    name: 'chat-agent-id',
+    host: 'localhost:5173'
   })
 
   //  return <div>Hello World</div>
