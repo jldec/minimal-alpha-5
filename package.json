@@ -1,5 +1,5 @@
 {
-  "name": "@redwoodjs/starter-minimal",
+  "name": "alpha-8-useagentchat",
   "version": "1.0.0",
   "description": "A bare-bones RedwoodSDK starter",
   "main": "index.js",

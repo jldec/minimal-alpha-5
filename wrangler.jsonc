@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "vanilla-react-agent-chat",
+  "name": "alpha-8-useagentchat",
   "main": "src/worker.tsx",
   "compatibility_date": "2025-05-08",
   "compatibility_flags": ["nodejs_compat"],
