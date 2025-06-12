@@ -12,6 +12,7 @@
     "dev": "NODE_ENV=${NODE_ENV:-development} vite dev --force",
     "build": "RWSDK_DEPLOY=1 vite build",
     "ship": "vite build && wrangler deploy",
+    "tail": "wrangler tail",
     "types": "wrangler types --include-runtime false --strict-vars false"
   },
   "dependencies": {
