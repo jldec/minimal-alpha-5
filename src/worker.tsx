@@ -17,5 +17,8 @@ export default defineApp([
       return response
     }
   },
-  render(Document, [index([App])])
+  // context(justinvdm): partysocket relies on `window.location.host` for client components.
+  // This won't be set durin SSR, so we need to give it the host explicitly
+  // https://github.com/cloudflare/partykit/blob/09c1d1c382252ec7a1c998a5f8faf4e7d6d2b484/packages/partysocket/src/react.ts#L25
+  render(Document, [index([({ request }) => <App host={new URL(request.url).host} />])])
 ])
