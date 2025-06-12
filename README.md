@@ -1,24 +1,13 @@
-# RedwoodSDK Minimal Starter
+# RedwoodSDK Cloudflare Agent Chat
+Demo project using RedwoodSDK with the [useAgentsChat](https://developers.cloudflare.com/agents/api-reference/agents-api/#chat-agent-react-api) react API from the Cloudflare [Agents](https://developers.cloudflare.com/agents/) SDK.
 
-This starter gives you a bare-bones RedwoodSDK project.
+> [!WARNING]
+> This repo is usig a v0.1.0-alpha pre-release  
+> The project currently only works in dev, but errors when deployed on cloudflare.  
+> https://rwsdk-use-agent-chat.jldec.workers.dev/
 
-Create your new project:
+See this rwsdk [discord thread](https://discord.com/channels/679514959968993311/1382133344011292712) for investigation and discussion.
 
-```shell
-npx create-rwsdk my-project-name
-cd my-project-name
-pnpm install
-```
+Use pnpm to `install`, `dev`, `build`, `types`, `ship`, and `tail` server logs.
 
-## Running the dev server
-
-```shell
-pnpm dev
-```
-
-Point your browser to the URL displayed in the terminal (e.g. `http://localhost:5173/`). You should see a "Hello World" message in your browser.
-
-## Further Reading
-
-- [RedwoodSDK Documentation](https://docs.rwsdk.com/)
-- [Cloudflare Workers Documentation](https://developers.cloudflare.com/workers)
+This repo was originally based on the [minimal](https://github.com/redwoodjs/sdk/tree/main/starters/minimal) rwsdk starter.
