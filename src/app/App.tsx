@@ -4,18 +4,20 @@ import { useAgent } from 'agents/react'
 import { useAgentChat } from 'agents/ai-react'
 import type { Message } from '@ai-sdk/react'
 
-export default function App({ host }: { host?: string }) {
+export default function App() {
   const agent = useAgent({
     agent: 'chat-agent-do-namespace',
-    name: 'chat-agent-id',
-    host
+    name: 'chat-agent-id'
   })
 
   //  return <div>Hello World</div>
 
   const { messages, input, handleInputChange, handleSubmit, clearHistory } = useAgentChat({
     agent,
-    maxSteps: 5
+    maxSteps: 5,
+    // context(justinvdm): Avoid fetch() as side-effect of SSR render
+    // https://github.com/cloudflare/agents/blob/398c7f5411f3a63f450007f83db7e3f29b6ed4c2/packages/agents/src/ai-react.tsx#L85-L88
+    getInitialMessages: typeof window === 'undefined' ? null : undefined
   })
 
   return (
