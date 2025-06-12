@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import { redwood } from 'rwsdk/vite'
-import chalk from "chalk";
+import chalk from 'chalk'
 
 export default defineConfig({
   plugins: [

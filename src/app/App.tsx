@@ -4,11 +4,11 @@ import { useAgent } from 'agents/react'
 import { useAgentChat } from 'agents/ai-react'
 import type { Message } from '@ai-sdk/react'
 
-export default function App() {
+export default function App({ host }: { host?: string }) {
   const agent = useAgent({
     agent: 'chat-agent-do-namespace',
     name: 'chat-agent-id',
-    host: 'localhost:5173'
+    host
   })
 
   //  return <div>Hello World</div>
